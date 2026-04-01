@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Senda</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --brand: #3CA76B;
+      --brand-light: #e8f7ef;
+      --brand-dark: #2d8554;
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --border: #e0e0e0;
+      --bg: #ffffff;
+      --code-bg: #f5f5f5;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      padding: 0 16px 64px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .header {
+      border-bottom: 3px solid var(--brand);
+      padding: 40px 0 24px;
+      margin-bottom: 32px;
+    }
+
+    .header .app-name {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 6px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .header .meta {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .header .meta span + span::before {
+      content: " · ";
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .toc h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+    }
+
+    .toc a {
+      color: var(--brand-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      border-bottom: 2px solid var(--brand-light);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 .num {
+      color: var(--brand);
+      margin-right: 6px;
+    }
+
+    .section h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
+    .section p {
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .section ul,
+    .section ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    .section li {
+      margin-bottom: 5px;
+    }
+
+    /* ── Table ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin-bottom: 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--brand);
+      color: #fff;
+      text-align: left;
+      padding: 10px 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #fafafa;
+    }
+
+    /* ── Callout ── */
+    .callout {
+      background: var(--brand-light);
+      border-left: 4px solid var(--brand);
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .callout strong {
+      color: var(--brand-dark);
+    }
+
+    /* ── Back to top ── */
+    .back-top {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-top:hover {
+      text-decoration: underline;
+    }
+
+    .back-top::before {
+      content: "↑ ";
+    }
+
+    /* ── Footer ── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .footer a {
+      color: var(--brand-dark);
+    }
+
+    a {
+      color: var(--brand-dark);
+    }
+
+    /* ── Mobile adjustments ── */
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .section h2 {
+        font-size: 17px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="app-name">Senda</div>
+    <h1>Política de Privacidad</h1>
+    <div class="meta">
+      <span>Última actualización: 31 de marzo de 2026</span>
+      <span>Vigente desde: 31 de marzo de 2026</span>
+    </div>
+  </header>
+
+  <!-- Introduction -->
+  <section class="section">
+    <p>
+      Esta Política de Privacidad describe cómo <strong>Jorgelina G. Saralegui</strong>
+      ("nosotros", "la desarrolladora") recopila, usa, almacena y protege la información
+      personal de quienes utilizan la aplicación móvil <strong>Senda</strong> ("la app",
+      "el servicio"). Al crear una cuenta y usar Senda, aceptás los términos descritos en
+      este documento.
+    </p>
+    <p>
+      Si tenés preguntas o solicitudes relacionadas con tu privacidad, podés
+      contactarnos en:
+      <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>.
+    </p>
+  </section>
+
+  <!-- Table of contents -->
+  <nav class="toc" aria-label="Tabla de contenidos">
+    <h2>Contenidos</h2>
+    <ol>
+      <li><a href="#datos-recopilados">Datos que recopilamos</a></li>
+      <li><a href="#autenticacion">Autenticación con Google</a></li>
+      <li><a href="#health-connect">Android Health Connect</a></li>
+      <li><a href="#ia-byok">Servicios de IA (modelo BYOK)</a></li>
+      <li><a href="#estudios-clinicos">Estudios clínicos y archivos médicos</a></li>
+      <li><a href="#suplementos">Suplementos y registros de salud</a></li>
+      <li><a href="#almacenamiento">Almacenamiento y transmisión de datos</a></li>
+      <li><a href="#terceros">Servicios de terceros</a></li>
+      <li><a href="#notificaciones">Notificaciones push</a></li>
+      <li><a href="#analitica">Analítica y rastreo</a></li>
+      <li><a href="#derechos">Tus derechos sobre tus datos</a></li>
+      <li><a href="#menores">Menores de edad</a></li>
+      <li><a href="#retencion">Retención de datos</a></li>
+      <li><a href="#cambios">Cambios a esta política</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. Datos recopilados -->
+  <section class="section" id="datos-recopilados">
+    <h2><span class="num">1.</span>Datos que recopilamos</h2>
+
+    <p>Senda recopila información en distintos momentos de tu uso de la app:</p>
+
+    <h3>Durante el registro y configuración inicial (onboarding)</h3>
+    <p>
+      Al crear tu perfil te pedimos los siguientes datos personales, que se almacenan
+      en nuestra base de datos en la nube (Supabase):
+    </p>
+    <ul>
+      <li>Nombre</li>
+      <li>Fecha de nacimiento</li>
+      <li>Sexo biológico</li>
+      <li>Peso y talla</li>
+      <li>Ciudad de residencia</li>
+      <li>Tipo de alimentación (por ejemplo, vegetariano, vegano, omnívoro)</li>
+      <li>Alergias alimentarias y sensibilidades</li>
+      <li>Objetivo de actividad física y nivel de actividad</li>
+      <li>Horario de ejercicio y hora de despertar habitual</li>
+      <li>Selección de avatar (emoji)</li>
+    </ul>
+
+    <h3>Datos de salud y actividad (Health Connect)</h3>
+    <p>
+      Si otorgás permiso, la app lee datos de <strong>Android Health Connect</strong>.
+      Estos datos <strong>no se almacenan en nuestros servidores</strong>; permanecen
+      en tu dispositivo y, opcionalmente, se envían a los servicios de IA que vos
+      configurés. Para más detalle, consultá la
+      <a href="#health-connect">sección 3</a>.
+    </p>
+
+    <h3>Registros de salud ingresados manualmente</h3>
+    <ul>
+      <li>Mediciones antropométricas (peso, cintura, cadera, pliegues cutáneos, IMC,
+          porcentaje de grasa corporal, densidad corporal)</li>
+      <li>Registros de suplementos (nombre, marca, dosis, frecuencia, stock, ingesta diaria)</li>
+      <li>Datos de médicos y consultas (nombre, especialidad, teléfono, correo,
+          dirección, notas y fechas de consulta)</li>
+      <li>Archivos de estudios clínicos (imágenes y PDFs de análisis médicos)</li>
+    </ul>
+
+    <h3>Claves de API de servicios de IA (BYOK)</h3>
+    <p>
+      Si elegís conectar un proveedor de IA externo, guardamos tu clave de API de
+      forma <strong>cifrada</strong> en Supabase. Ver <a href="#ia-byok">sección 4</a>.
+    </p>
+
+    <h3>Datos técnicos</h3>
+    <ul>
+      <li>Token de sesión (almacenado localmente en AsyncStorage)</li>
+      <li>Indicador de conexión previa a Health Connect (AsyncStorage)</li>
+      <li>Token de notificaciones push (Expo)</li>
+    </ul>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 2. Autenticación -->
+  <section class="section" id="autenticacion">
+    <h2><span class="num">2.</span>Autenticación con Google</h2>
+
+    <p>
+      Senda utiliza <strong>Google Sign-In</strong> como único método de autenticación.
+      Durante el inicio de sesión, Google comparte con nosotros:
+    </p>
+    <ul>
+      <li>Tu dirección de correo electrónico</li>
+      <li>Tu ID único de Google</li>
+      <li>Tokens de sesión necesarios para mantener tu sesión activa</li>
+    </ul>
+    <p>
+      No recibimos ni almacenamos tu contraseña de Google. La gestión de credenciales
+      se delega íntegramente a los sistemas de autenticación de Supabase y Google.
+      La política de privacidad de Google está disponible en
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+        policies.google.com/privacy</a>.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 3. Health Connect -->
+  <section class="section" id="health-connect">
+    <h2><span class="num">3.</span>Android Health Connect</h2>
+
+    <div class="callout">
+      <strong>Solo lectura.</strong> Senda únicamente <em>lee</em> datos de Health Connect.
+      Nunca escribe ni modifica tu información de salud en Health Connect.
+    </div>
+
+    <p>
+      Si otorgás permiso, Senda puede acceder a las siguientes categorías de datos
+      almacenados en Android Health Connect:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Tipos de datos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Actividad física</td>
+            <td>Pasos, distancia, calorías activas</td>
+          </tr>
+          <tr>
+            <td>Frecuencia cardíaca</td>
+            <td>Frecuencia cardíaca, frecuencia cardíaca en reposo</td>
+          </tr>
+          <tr>
+            <td>Oxigenación</td>
+            <td>SpO₂ (saturación de oxígeno en sangre)</td>
+          </tr>
+          <tr>
+            <td>Sueño</td>
+            <td>Sesiones de sueño</td>
+          </tr>
+          <tr>
+            <td>Composición corporal</td>
+            <td>Peso, porcentaje de grasa corporal, masa magra,
+                masa de agua corporal, tasa metabólica basal (TMB)</td>
+          </tr>
+          <tr>
+            <td>Temperatura</td>
+            <td>Temperatura corporal</td>
+          </tr>
+          <tr>
+            <td>Ciclo menstrual</td>
+            <td>Datos de menstruación</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Cómo se procesan estos datos</h3>
+    <ul>
+      <li>
+        <strong>Procesamiento local:</strong> los datos de Health Connect se leen
+        directamente en tu dispositivo y se procesan de forma local para mostrarte
+        resúmenes y contexto dentro de la app.
+      </li>
+      <li>
+        <strong>Envío a IA (opcional):</strong> si utilizás funciones de IA, resúmenes
+        o extractos de estos datos pueden enviarse al proveedor de IA que hayas
+        configurado (ver <a href="#ia-byok">sección 4</a>). Este envío es directo
+        desde tu dispositivo; los datos <strong>no pasan por nuestros servidores</strong>.
+      </li>
+      <li>
+        <strong>No se almacenan en Supabase:</strong> los datos de Health Connect
+        <strong>nunca se guardan</strong> en nuestra base de datos en la nube.
+      </li>
+      <li>
+        <strong>Reconexión automática:</strong> si ya habías otorgado permiso previamente,
+        la app puede reconectarse automáticamente a Health Connect al abrirse.
+        Podés revocar este permiso en cualquier momento desde la app o desde la
+        configuración de Android.
+      </li>
+    </ul>
+
+    <p>
+      Los términos de Google Health Connect están disponibles en
+      <a href="https://support.google.com/health/answer/12420015" target="_blank" rel="noopener">
+        support.google.com/health</a>.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 4. IA BYOK -->
+  <section class="section" id="ia-byok">
+    <h2><span class="num">4.</span>Servicios de IA — modelo BYOK</h2>
+
+    <p>
+      Senda ofrece funciones de inteligencia artificial (planificación de alimentación,
+      análisis de suplementos, resumen de estudios clínicos, etc.) bajo un modelo
+      <strong>BYOK (Bring Your Own Key)</strong>: vos decidís qué proveedor de IA usar
+      y aportás tu propia clave de API.
+    </p>
+
+    <h3>Proveedores disponibles</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Proveedor</th>
+            <th>Modelo</th>
+            <th>Requerimiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firebase AI (Gemini via Google)</td>
+            <td>Plan gratuito</td>
+            <td>Sin clave propia (incluido)</td>
+          </tr>
+          <tr>
+            <td>Google Gemini API</td>
+            <td>Opcional / pago</td>
+            <td>Clave de API propia</td>
+          </tr>
+          <tr>
+            <td>OpenAI (GPT)</td>
+            <td>Opcional / pago</td>
+            <td>Clave de API propia</td>
+          </tr>
+          <tr>
+            <td>Anthropic (Claude)</td>
+            <td>Opcional / pago</td>
+            <td>Clave de API propia</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Almacenamiento de claves de API</h3>
+    <p>
+      Las claves de API que ingresás se almacenan de forma <strong>cifrada</strong>
+      en Supabase. Nunca se transmiten en texto plano.
+    </p>
+
+    <h3>Qué datos se envían a los servicios de IA</h3>
+    <p>
+      Dependiendo de las funciones que uses, los siguientes datos pueden enviarse
+      al proveedor de IA seleccionado:
+    </p>
+    <ul>
+      <li>Tu perfil de usuario (nombre, edad, sexo, objetivos, dieta, alergias)</li>
+      <li>Resúmenes de datos de salud de Health Connect</li>
+      <li>Solicitudes de planificación de alimentación</li>
+      <li>Información sobre suplementos</li>
+      <li>Resúmenes de estudios clínicos</li>
+      <li>Imágenes y PDFs de estudios médicos (en formato base64)</li>
+      <li>Audio (en formato base64), si usás funciones de voz</li>
+    </ul>
+
+    <h3>Importante sobre las llamadas a la IA</h3>
+    <div class="callout">
+      Las llamadas a los servicios de IA se realizan <strong>desde tu dispositivo
+      directamente</strong> al proveedor correspondiente. Los datos no transitan
+      por los servidores de Senda. Cada proveedor aplica su propia política de
+      privacidad:
+      <ul style="margin-top: 8px;">
+        <li>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            Google — policies.google.com/privacy</a>
+        </li>
+        <li>
+          <a href="https://openai.com/privacy" target="_blank" rel="noopener">
+            OpenAI — openai.com/privacy</a>
+        </li>
+        <li>
+          <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">
+            Anthropic — anthropic.com/privacy</a>
+        </li>
+      </ul>
+    </div>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 5. Estudios clínicos -->
+  <section class="section" id="estudios-clinicos">
+    <h2><span class="num">5.</span>Estudios clínicos y archivos médicos</h2>
+
+    <p>
+      Senda te permite subir imágenes y PDFs de tus análisis clínicos para que
+      la IA genere un resumen interpretativo.
+    </p>
+    <ul>
+      <li>
+        <strong>Almacenamiento:</strong> los archivos se guardan en
+        <strong>Supabase Storage</strong>, asociados a tu cuenta.
+      </li>
+      <li>
+        <strong>Análisis con IA:</strong> el contenido del archivo (en formato
+        base64) puede enviarse al proveedor de IA que hayas configurado para
+        generar un resumen. Este envío es directo desde tu dispositivo.
+      </li>
+      <li>
+        <strong>Expiración automática:</strong> por defecto, los archivos se
+        eliminan automáticamente <strong>1 año después de su carga</strong>.
+        Este período es configurable desde la app.
+      </li>
+      <li>
+        <strong>Eliminación manual:</strong> podés eliminar cualquier estudio
+        en cualquier momento desde la sección correspondiente de la app.
+      </li>
+    </ul>
+
+    <div class="callout">
+      <strong>Datos sensibles de salud.</strong> Los archivos médicos contienen
+      información de salud especialmente sensible. Te recomendamos revisar
+      regularmente los archivos almacenados y eliminar aquellos que ya no necesitás.
+    </div>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 6. Suplementos y registros -->
+  <section class="section" id="suplementos">
+    <h2><span class="num">6.</span>Suplementos, médicos y antropometría</h2>
+
+    <h3>Suplementos</h3>
+    <p>
+      Podés registrar manualmente los suplementos que tomás: nombre, marca, dosis,
+      frecuencia de consumo, stock disponible y registros diarios de ingesta.
+      Estos datos se almacenan en Supabase y pueden usarse como contexto en las
+      funciones de IA de Senda.
+    </p>
+
+    <h3>Médicos y consultas</h3>
+    <p>
+      La app te permite llevar un registro de tus médicos y consultas, incluyendo:
+      nombre, especialidad, teléfono, correo electrónico, dirección, notas y
+      fechas de consulta. Esta información se almacena en Supabase y es accesible
+      únicamente desde tu cuenta.
+    </p>
+
+    <h3>Antropometría</h3>
+    <p>
+      Podés registrar mediciones corporales periódicas: peso, cintura, cadera,
+      pliegues cutáneos, IMC, porcentaje de grasa corporal y densidad corporal.
+      Estos datos se almacenan en Supabase y se usan para mostrar tu evolución
+      en el tiempo dentro de la app.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 7. Almacenamiento -->
+  <section class="section" id="almacenamiento">
+    <h2><span class="num">7.</span>Almacenamiento y transmisión de datos</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de dato</th>
+            <th>Dónde se almacena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Perfil, planes, suplementos, médicos, antropometría, estudios</td>
+            <td>Supabase (base de datos en la nube)</td>
+          </tr>
+          <tr>
+            <td>Archivos médicos (PDFs, imágenes)</td>
+            <td>Supabase Storage</td>
+          </tr>
+          <tr>
+            <td>Claves de API de proveedores de IA</td>
+            <td>Supabase (cifradas)</td>
+          </tr>
+          <tr>
+            <td>Sesión de usuario</td>
+            <td>AsyncStorage local en el dispositivo</td>
+          </tr>
+          <tr>
+            <td>Indicador de Health Connect</td>
+            <td>AsyncStorage local en el dispositivo</td>
+          </tr>
+          <tr>
+            <td>Datos de Health Connect</td>
+            <td>Solo en el dispositivo — no se suben a la nube</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Toda la comunicación entre la app y Supabase se realiza a través de
+      <strong>HTTPS/TLS</strong>. Los datos en reposo en Supabase están protegidos
+      por los mecanismos de seguridad de la plataforma, incluyendo cifrado a nivel
+      de base de datos.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 8. Terceros -->
+  <section class="section" id="terceros">
+    <h2><span class="num">8.</span>Servicios de terceros</h2>
+
+    <p>
+      Senda utiliza los siguientes servicios de terceros para su funcionamiento.
+      Cada uno tiene sus propias políticas de privacidad:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Servicio</th>
+            <th>Finalidad</th>
+            <th>Política de privacidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Base de datos, autenticación y almacenamiento de archivos</td>
+            <td>
+              <a href="https://supabase.com/privacy" target="_blank" rel="noopener">
+                supabase.com/privacy</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Google (Sign-In + Firebase AI)</td>
+            <td>Autenticación e IA gratuita (Gemini)</td>
+            <td>
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+                policies.google.com/privacy</a>
+            </td>
+          </tr>
+          <tr>
+            <td>OpenAI (opcional, BYOK)</td>
+            <td>Modelos GPT para funciones de IA</td>
+            <td>
+              <a href="https://openai.com/privacy" target="_blank" rel="noopener">
+                openai.com/privacy</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Anthropic (opcional, BYOK)</td>
+            <td>Modelos Claude para funciones de IA</td>
+            <td>
+              <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">
+                anthropic.com/privacy</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Android Health Connect</td>
+            <td>Lectura de datos de salud y actividad</td>
+            <td>
+              <a href="https://support.google.com/health/answer/12420015" target="_blank" rel="noopener">
+                Términos de Health Connect</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Expo Push Notifications</td>
+            <td>Notificaciones de recordatorios</td>
+            <td>
+              <a href="https://expo.dev/privacy" target="_blank" rel="noopener">
+                expo.dev/privacy</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Solo compartimos datos con terceros en la medida necesaria para proveer el
+      servicio y según lo describe esta política. No vendemos tus datos personales
+      a terceros.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 9. Notificaciones -->
+  <section class="section" id="notificaciones">
+    <h2><span class="num">9.</span>Notificaciones push</h2>
+
+    <p>
+      Senda utiliza <strong>Expo Push Notifications</strong> para enviarte
+      recordatorios locales (por ejemplo, recordatorios de tomar suplementos,
+      horarios de comidas o actividad física).
+    </p>
+    <ul>
+      <li>
+        Al habilitar las notificaciones, se genera y almacena en Supabase un
+        <strong>token de dispositivo</strong> que identifica tu instalación de la app.
+      </li>
+      <li>
+        Las notificaciones se usan exclusivamente para recordatorios dentro de
+        la app. No se usan para publicidad ni para comunicaciones de marketing.
+      </li>
+      <li>
+        Podés desactivar las notificaciones en cualquier momento desde la
+        configuración del sistema operativo Android.
+      </li>
+    </ul>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 10. Analítica -->
+  <section class="section" id="analitica">
+    <h2><span class="num">10.</span>Analítica y rastreo</h2>
+
+    <div class="callout">
+      <strong>Sin analítica de terceros.</strong> Senda <strong>no utiliza</strong>
+      ninguna herramienta de analítica, rastreo o telemetría de terceros.
+      No hay Mixpanel, Google Analytics, Firebase Analytics, Crashlytics, ni
+      ningún SDK de rastreo de comportamiento o publicidad.
+    </div>
+
+    <p>
+      No se recopilan datos sobre tu comportamiento dentro de la app (pantallas
+      visitadas, tiempo de uso, clics) con fines analíticos ni publicitarios.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 11. Derechos -->
+  <section class="section" id="derechos">
+    <h2><span class="num">11.</span>Tus derechos sobre tus datos</h2>
+
+    <p>
+      Tenés control directo sobre tu información dentro de la app. A continuación
+      se detallan tus derechos y cómo ejercerlos:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Derecho</th>
+            <th>Cómo ejercerlo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Acceso</strong> a tus datos</td>
+            <td>Todos tus datos son visibles directamente dentro de la app en las
+                secciones correspondientes.</td>
+          </tr>
+          <tr>
+            <td><strong>Eliminación</strong> de registros individuales</td>
+            <td>Podés eliminar suplementos, estudios clínicos, médicos y planes
+                directamente desde la app.</td>
+          </tr>
+          <tr>
+            <td><strong>Eliminación de cuenta</strong></td>
+            <td>Desde la configuración de la app podés solicitar la eliminación de
+                tu cuenta. Esto elimina tu perfil y todos los datos asociados, y
+                cierra tu sesión de forma permanente.</td>
+          </tr>
+          <tr>
+            <td><strong>Desconexión</strong> de Health Connect</td>
+            <td>Podés revocar el acceso de Senda a Health Connect desde la app o
+                desde la configuración de Health Connect en Android.</td>
+          </tr>
+          <tr>
+            <td><strong>Portabilidad</strong> de datos</td>
+            <td>La exportación automatizada de datos aún no está disponible.
+                Para solicitar una copia de tus datos, contactanos en
+                <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>.</td>
+          </tr>
+          <tr>
+            <td><strong>Rectificación</strong></td>
+            <td>Podés editar tu perfil y la mayoría de tus datos directamente
+                desde la app.</td>
+          </tr>
+          <tr>
+            <td><strong>Oposición al tratamiento</strong></td>
+            <td>Podés desactivar las funciones de IA no utilizando esos módulos o
+                no vinculando un proveedor. Podés desconectar Health Connect en
+                cualquier momento.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Para ejercer cualquier derecho que no pueda gestionarse desde la app, escribinos
+      a <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>.
+      Respondemos en un plazo máximo de 30 días.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 12. Menores -->
+  <section class="section" id="menores">
+    <h2><span class="num">12.</span>Menores de edad</h2>
+
+    <p>
+      Senda está diseñada para usuarios de <strong>16 años o más</strong>.
+      No recopilamos intencionalmente datos de menores de 16 años. Si tenés
+      conocimiento de que una persona menor de esa edad ha creado una cuenta,
+      contactanos a
+      <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>
+      para que podamos eliminar su información.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 13. Retención -->
+  <section class="section" id="retencion">
+    <h2><span class="num">13.</span>Retención de datos</h2>
+
+    <ul>
+      <li>
+        <strong>Datos de perfil y registros:</strong> se conservan hasta que
+        eliminés los registros individualmente o eliminés tu cuenta.
+      </li>
+      <li>
+        <strong>Entradas de memoria de IA:</strong> tienen una fecha de expiración
+        configurable desde la app.
+      </li>
+      <li>
+        <strong>Estudios clínicos:</strong> se eliminan automáticamente
+        <strong>1 año después de su carga</strong>, salvo que configures un
+        período distinto o los elimines antes.
+      </li>
+      <li>
+        <strong>Datos de Health Connect:</strong> no se retienen en nuestros
+        servidores; residen en tu dispositivo conforme a la política de
+        Android Health Connect.
+      </li>
+      <li>
+        <strong>Tras la eliminación de cuenta:</strong> los datos se eliminan
+        de nuestra base de datos activa de forma inmediata. Podría existir
+        un período corto de retención en copias de seguridad de Supabase,
+        tras el cual son purgados.
+      </li>
+    </ul>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 14. Cambios -->
+  <section class="section" id="cambios">
+    <h2><span class="num">14.</span>Cambios a esta política</h2>
+
+    <p>
+      Podemos actualizar esta Política de Privacidad cuando sea necesario. En caso
+      de cambios materiales que afecten tus derechos o el tratamiento de tus datos,
+      te notificaremos mediante un aviso dentro de la app o por correo electrónico.
+    </p>
+    <p>
+      La fecha de "Última actualización" en la parte superior de esta página
+      siempre refleja la versión vigente. El uso continuado de Senda después de
+      recibir la notificación de un cambio implica tu aceptación de la política
+      actualizada.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- 15. Contacto -->
+  <section class="section" id="contacto">
+    <h2><span class="num">15.</span>Contacto</h2>
+
+    <p>
+      Si tenés preguntas, solicitudes o inquietudes sobre esta Política de
+      Privacidad o sobre el tratamiento de tus datos personales, podés
+      contactarnos en:
+    </p>
+    <ul>
+      <li><strong>Desarrolladora:</strong> Jorgelina G. Saralegui</li>
+      <li>
+        <strong>Correo electrónico:</strong>
+        <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>
+      </li>
+    </ul>
+    <p>
+      Respondemos a todas las consultas en un plazo máximo de 30 días hábiles.
+    </p>
+
+    <a class="back-top" href="#top">Volver al inicio</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      &copy; 2026 Jorgelina G. Saralegui — Senda App. Todos los derechos reservados.
+    </p>
+    <p style="margin-top: 6px;">
+      Contacto:
+      <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

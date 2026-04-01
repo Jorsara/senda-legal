@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos de Servicio — Senda</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --brand: #3CA76B;
+      --brand-dark: #2e8a55;
+      --brand-light: #e8f7ef;
+      --text: #1a1a1a;
+      --text-muted: #555;
+      --border: #e0e0e0;
+      --bg: #ffffff;
+      --warning-bg: #fff8e1;
+      --warning-border: #f9a825;
+      --warning-text: #5a3e00;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f5;
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .page-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 0 0 64px;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--brand);
+      padding: 32px 32px 28px;
+      color: #fff;
+    }
+
+    .site-header .app-name {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+
+    .site-header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .site-header .meta {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    /* Medical disclaimer banner */
+    .disclaimer-banner {
+      background: var(--warning-bg);
+      border-left: 4px solid var(--warning-border);
+      margin: 24px 32px;
+      padding: 16px 18px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .disclaimer-banner .disclaimer-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--warning-text);
+      margin-bottom: 6px;
+    }
+
+    .disclaimer-banner p {
+      font-size: 14px;
+      color: var(--warning-text);
+      line-height: 1.6;
+    }
+
+    /* Table of contents */
+    .toc {
+      margin: 8px 32px 24px;
+      background: var(--brand-light);
+      border: 1px solid #c3e6d4;
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+    }
+
+    .toc a {
+      font-size: 14px;
+      color: var(--brand-dark);
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content */
+    .content {
+      padding: 0 32px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      padding-top: 8px;
+    }
+
+    .section h2 {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--text);
+      border-bottom: 2px solid var(--brand);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      scroll-margin-top: 16px;
+    }
+
+    .section h2 .section-num {
+      color: var(--brand);
+      margin-right: 6px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section ul,
+    .section ol {
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+
+    .section li {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .section li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--brand-light);
+      border: 1px solid #c3e6d4;
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+
+    .highlight-box p {
+      color: #1f5c38 !important;
+      font-size: 14px !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Warning box */
+    .warning-box {
+      background: var(--warning-bg);
+      border: 1px solid #f9a825;
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin: 14px 0;
+    }
+
+    .warning-box p {
+      color: var(--warning-text) !important;
+      font-size: 14px !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* Footer */
+    .page-footer {
+      margin-top: 48px;
+      padding: 24px 32px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .page-footer p {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+
+    .page-footer a {
+      color: var(--brand-dark);
+      text-decoration: none;
+    }
+
+    .page-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .site-header {
+        padding: 24px 20px 20px;
+      }
+
+      .site-header h1 {
+        font-size: 22px;
+      }
+
+      .disclaimer-banner,
+      .toc {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      .content {
+        padding: 0 16px;
+      }
+
+      .page-footer {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+      <p class="app-name">Senda</p>
+      <h1>Términos de Servicio</h1>
+      <p class="meta">
+        Última actualización: 31 de marzo de 2026 &nbsp;·&nbsp; Vigente desde: 31 de marzo de 2026
+      </p>
+    </header>
+
+    <!-- Medical disclaimer banner -->
+    <div class="disclaimer-banner" role="note" aria-label="Aviso médico importante">
+      <p class="disclaimer-title">Aviso importante — No es un servicio médico</p>
+      <p>
+        Senda es una aplicación de planificación de salud y bienestar personal.
+        El contenido generado por inteligencia artificial en la app (planes de alimentación,
+        análisis de suplementos, resúmenes de estudios clínicos) es <strong>únicamente informativo</strong>
+        y <strong>no constituye consejo médico</strong>. Siempre consultá con un profesional de la salud
+        antes de tomar decisiones relacionadas con tu salud.
+      </p>
+    </div>
+
+    <!-- Table of contents -->
+    <nav class="toc" aria-label="Índice de contenidos">
+      <h2>Índice</h2>
+      <ol>
+        <li><a href="#aceptacion">Aceptación de los términos</a></li>
+        <li><a href="#descripcion">Descripción del servicio</a></li>
+        <li><a href="#cuentas">Cuentas de usuario</a></li>
+        <li><a href="#contenido-ia">Contenido generado por IA</a></li>
+        <li><a href="#byok">Uso de claves de API propias (BYOK)</a></li>
+        <li><a href="#datos-salud">Datos de salud y Health Connect</a></li>
+        <li><a href="#documentos-medicos">Estudios clínicos y documentos médicos</a></li>
+        <li><a href="#datos-usuario">Propiedad y gestión de los datos</a></li>
+        <li><a href="#usos-prohibidos">Usos prohibidos</a></li>
+        <li><a href="#limitacion">Limitación de responsabilidad</a></li>
+        <li><a href="#disponibilidad">Disponibilidad del servicio</a></li>
+        <li><a href="#propiedad-intelectual">Propiedad intelectual</a></li>
+        <li><a href="#ley-aplicable">Ley aplicable y jurisdicción</a></li>
+        <li><a href="#cambios">Cambios en los términos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ol>
+    </nav>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- 1. Acceptance -->
+      <section class="section" id="aceptacion">
+        <h2><span class="section-num">1.</span>Aceptación de los términos</h2>
+        <p>
+          Al descargar, instalar o utilizar la aplicación Senda ("la App"), aceptás estos Términos de Servicio
+          en su totalidad. Si no estás de acuerdo con alguno de estos términos, no debés utilizar la App.
+        </p>
+        <p>
+          Para usar Senda debés tener al menos <strong>16 años de edad</strong>. Si sos menor de 16 años,
+          no estás autorizado/a a utilizar la App.
+        </p>
+        <p>
+          Estos términos constituyen un acuerdo legal vinculante entre vos (el/la usuario/a) y
+          Jorgelina G. Saralegui, desarrolladora de Senda.
+        </p>
+      </section>
+
+      <!-- 2. Description -->
+      <section class="section" id="descripcion">
+        <h2><span class="section-num">2.</span>Descripción del servicio</h2>
+        <p>
+          Senda es una aplicación móvil de planificación de salud y bienestar personal. Sus funcionalidades incluyen,
+          entre otras:
+        </p>
+        <ul>
+          <li>Generación de planes de alimentación mediante inteligencia artificial.</li>
+          <li>Seguimiento y análisis de suplementos.</li>
+          <li>Monitoreo de métricas de salud y bienestar.</li>
+          <li>Análisis de estudios clínicos y documentos médicos personales.</li>
+          <li>Integración con datos de salud del dispositivo mediante Health Connect.</li>
+        </ul>
+        <div class="warning-box">
+          <p>
+            <strong>Senda no es un servicio médico.</strong> La App no proporciona diagnósticos,
+            tratamientos ni recomendaciones médicas. No reemplaza la consulta con profesionales
+            de la salud calificados.
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. Accounts -->
+      <section class="section" id="cuentas">
+        <h2><span class="section-num">3.</span>Cuentas de usuario</h2>
+        <p>
+          Para acceder a Senda es necesario crear una cuenta. La autenticación se realiza exclusivamente
+          mediante <strong>Google Sign-In</strong>. Al autenticarte, aceptás también los
+          Términos de Servicio y la Política de Privacidad de Google.
+        </p>
+        <p>Respecto a tu cuenta, te comprometés a:</p>
+        <ul>
+          <li>Mantener la seguridad de tus credenciales de acceso y no compartirlas con terceros.</li>
+          <li>Notificar de inmediato cualquier acceso no autorizado a tu cuenta.</li>
+          <li>Utilizar una única cuenta personal (una cuenta por persona).</li>
+          <li>Proporcionar información veraz y mantenerla actualizada.</li>
+        </ul>
+        <p>
+          Nos reservamos el derecho de suspender o eliminar cuentas que violen estos términos o
+          que muestren actividad fraudulenta o abusiva.
+        </p>
+      </section>
+
+      <!-- 4. AI content -->
+      <section class="section" id="contenido-ia">
+        <h2><span class="section-num">4.</span>Contenido generado por IA</h2>
+        <p>
+          Senda utiliza modelos de inteligencia artificial para generar planes de alimentación,
+          analizar suplementos y resumir estudios clínicos. Es fundamental que comprendas las
+          siguientes limitaciones:
+        </p>
+        <ul>
+          <li>
+            Todo el contenido generado por IA es <strong>únicamente informativo</strong> y
+            no constituye consejo médico, nutricional ni diagnóstico de ningún tipo.
+          </li>
+          <li>
+            Los modelos de IA pueden cometer errores, producir información imprecisa o
+            desactualizada, y sus resultados pueden variar entre consultas.
+          </li>
+          <li>
+            <strong>Debés consultar con un médico, nutricionista u otro profesional de la salud</strong>
+            calificado antes de tomar cualquier decisión relacionada con tu salud, alimentación
+            o tratamiento médico.
+          </li>
+          <li>
+            Senda no garantiza la exactitud, completitud ni idoneidad de ningún contenido
+            generado por IA para tu situación personal.
+          </li>
+        </ul>
+        <div class="warning-box">
+          <p>
+            <strong>Exoneración de responsabilidad médica:</strong> Jorgelina G. Saralegui
+            y Senda no son responsables por ningún daño, perjuicio o consecuencia derivada
+            de decisiones tomadas en base al contenido generado por IA de la App.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. BYOK -->
+      <section class="section" id="byok">
+        <h2><span class="section-num">5.</span>Uso de claves de API propias (BYOK)</h2>
+        <p>
+          Senda ofrece la posibilidad de que los usuarios aporten sus propias claves de API
+          ("Bring Your Own Key" o BYOK) para los siguientes proveedores de IA:
+          Google Gemini, OpenAI y Anthropic Claude.
+        </p>
+        <p>Al usar esta funcionalidad, aceptás que:</p>
+        <ul>
+          <li>
+            Sos el/la único/a responsable de los costos incurridos con tu clave de API
+            ante el proveedor correspondiente.
+          </li>
+          <li>
+            Tus datos e interacciones serán enviados directamente a los servidores del
+            proveedor de IA elegido. Los términos de servicio y la política de privacidad
+            de ese proveedor se aplican a dicho procesamiento.
+          </li>
+          <li>
+            Senda no asume responsabilidad alguna por el manejo de tus datos por parte
+            de proveedores de IA de terceros.
+          </li>
+          <li>
+            Es tu responsabilidad mantener la confidencialidad de tus claves de API
+            y revocarlas si sospechas que han sido comprometidas.
+          </li>
+        </ul>
+        <div class="highlight-box">
+          <p>
+            <strong>Nivel gratuito:</strong> Si no configurás una clave de API propia,
+            Senda utiliza Firebase AI (infraestructura de Google). En ese caso, se aplican
+            los Términos de Servicio y la Política de Privacidad de Google.
+          </p>
+        </div>
+      </section>
+
+      <!-- 6. Health data -->
+      <section class="section" id="datos-salud">
+        <h2><span class="section-num">6.</span>Datos de salud y Health Connect</h2>
+        <p>
+          Senda puede integrarse con <strong>Health Connect</strong> de Android para acceder
+          a métricas de salud de tu dispositivo. Respecto a esta integración:
+        </p>
+        <ul>
+          <li>
+            El acceso a Health Connect es de <strong>solo lectura</strong>; Senda no escribe
+            ni modifica datos en Health Connect.
+          </li>
+          <li>
+            El acceso se realiza únicamente con tu consentimiento explícito mediante los
+            permisos que otorgás voluntariamente.
+          </li>
+          <li>
+            Senda no comparte tus datos de salud con terceros, excepto cuando sea necesario
+            para el procesamiento de IA (según lo descrito en la sección 4 y 5).
+          </li>
+          <li>
+            Podés desconectar Health Connect y revocar los permisos en cualquier momento
+            desde la configuración del dispositivo o de la App.
+          </li>
+        </ul>
+        <p>
+          Para más detalles sobre cómo tratamos los datos de salud, consultá nuestra
+          <a href="privacy.html" style="color: var(--brand-dark);">Política de Privacidad</a>.
+        </p>
+      </section>
+
+      <!-- 7. Medical documents -->
+      <section class="section" id="documentos-medicos">
+        <h2><span class="section-num">7.</span>Estudios clínicos y documentos médicos</h2>
+        <p>
+          Senda permite subir documentos médicos personales (como resultados de análisis clínicos)
+          para su análisis mediante IA. Al utilizar esta funcionalidad:
+        </p>
+        <ul>
+          <li>
+            Subís tus documentos médicos de forma voluntaria y bajo tu exclusiva
+            responsabilidad y discreción.
+          </li>
+          <li>
+            Senda almacena los documentos de forma segura, pero <strong>no es un sistema
+            de gestión de historias clínicas</strong> ni está homologado como tal.
+          </li>
+          <li>
+            El análisis de tus documentos médicos por parte de la IA es
+            <strong>estrictamente informativo</strong> y no constituye un diagnóstico médico.
+          </li>
+          <li>
+            <strong>Debés verificar cualquier interpretación de la IA con tu médico tratante</strong>
+            u otro profesional de la salud antes de actuar en consecuencia.
+          </li>
+          <li>
+            No subas documentos de terceros sin su consentimiento explícito.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 8. Data ownership -->
+      <section class="section" id="datos-usuario">
+        <h2><span class="section-num">8.</span>Propiedad y gestión de los datos</h2>
+        <p>
+          <strong>Tus datos son tuyos.</strong> Senda no reivindica propiedad sobre el
+          contenido ni los datos personales que generás o subís a la App.
+        </p>
+        <p>
+          Al usar Senda, nos otorgás una licencia limitada, no exclusiva y revocable
+          para procesar tus datos con el único fin de brindarte las funcionalidades de la App
+          (por ejemplo, generar planes de alimentación o analizar documentos).
+        </p>
+        <p>Tenés derecho a:</p>
+        <ul>
+          <li>Acceder a tus datos en cualquier momento desde la App.</li>
+          <li>Solicitar la eliminación de tu cuenta y todos tus datos asociados en cualquier momento.</li>
+          <li>Exportar tu información según las funcionalidades disponibles en la App.</li>
+        </ul>
+        <p>
+          Para solicitar la eliminación de tu cuenta y datos, contactanos en
+          <a href="mailto:privacidad.senda@gmail.com" style="color: var(--brand-dark);">privacidad.senda@gmail.com</a>.
+        </p>
+      </section>
+
+      <!-- 9. Prohibited uses -->
+      <section class="section" id="usos-prohibidos">
+        <h2><span class="section-num">9.</span>Usos prohibidos</h2>
+        <p>Al usar Senda, te comprometés a no:</p>
+        <ul>
+          <li>Compartir tus credenciales de acceso ni permitir que terceros accedan a tu cuenta.</li>
+          <li>Realizar ingeniería inversa, descompilar, desensamblar ni intentar extraer el código fuente de la App.</li>
+          <li>Utilizar la App con fines que puedan causar daño a otras personas.</li>
+          <li>Subir contenido malicioso, como virus, malware o cualquier código dañino.</li>
+          <li>Utilizar la App para actividades ilegales o que violen derechos de terceros.</li>
+          <li>Intentar acceder a sistemas, redes o datos no autorizados relacionados con Senda.</li>
+          <li>Interferir con el funcionamiento normal de la App o sus servidores.</li>
+          <li>Crear múltiples cuentas para eludir restricciones o suspensiones.</li>
+        </ul>
+      </section>
+
+      <!-- 10. Limitation of liability -->
+      <section class="section" id="limitacion">
+        <h2><span class="section-num">10.</span>Limitación de responsabilidad</h2>
+        <p>
+          Senda se proporciona <strong>"tal cual" (as is)</strong>, sin garantías de ningún tipo,
+          expresas o implícitas.
+        </p>
+        <p>En la máxima medida permitida por la ley aplicable, Jorgelina G. Saralegui no será
+          responsable por:</p>
+        <ul>
+          <li>
+            La exactitud, completitud o idoneidad del contenido generado por IA de la App.
+          </li>
+          <li>
+            Daños a la salud, económicos o de cualquier otro tipo derivados de decisiones
+            tomadas en base al contenido de la App.
+          </li>
+          <li>
+            Interrupciones del servicio causadas por proveedores externos, incluyendo
+            Supabase, Google Firebase, Google Gemini, OpenAI, Anthropic u otros.
+          </li>
+          <li>
+            Pérdida de datos provocada por fallas de infraestructura de terceros.
+          </li>
+          <li>
+            Daños indirectos, incidentales, especiales o consecuentes de ningún tipo.
+          </li>
+        </ul>
+        <div class="highlight-box">
+          <p>
+            La responsabilidad máxima de Senda frente al usuario está limitada al monto
+            que el usuario haya pagado por la App. Dado que Senda es una aplicación gratuita,
+            dicho monto es <strong>$0</strong>.
+          </p>
+        </div>
+      </section>
+
+      <!-- 11. Availability -->
+      <section class="section" id="disponibilidad">
+        <h2><span class="section-num">11.</span>Disponibilidad del servicio</h2>
+        <p>
+          No garantizamos disponibilidad ininterrumpida ni libre de errores de la App.
+          El servicio puede verse afectado por mantenimiento, actualizaciones o fallas técnicas.
+        </p>
+        <p>Nos reservamos el derecho de:</p>
+        <ul>
+          <li>Modificar, suspender o discontinuar funcionalidades de la App en cualquier momento.</li>
+          <li>Realizar tareas de mantenimiento que puedan implicar períodos de inactividad.</li>
+        </ul>
+        <p>
+          Cuando sea técnicamente posible, intentaremos notificar a los usuarios con antelación
+          sobre cambios significativos en el servicio mediante notificaciones en la App o
+          comunicaciones por correo electrónico.
+        </p>
+      </section>
+
+      <!-- 12. Intellectual property -->
+      <section class="section" id="propiedad-intelectual">
+        <h2><span class="section-num">12.</span>Propiedad intelectual</h2>
+        <p>
+          El diseño, código fuente, marca, logotipo, nombre y todos los elementos de la
+          aplicación Senda son propiedad exclusiva de Jorgelina G. Saralegui y están
+          protegidos por las leyes de propiedad intelectual aplicables.
+        </p>
+        <p>
+          Queda prohibida la reproducción, distribución, modificación o uso comercial
+          de cualquier elemento de la App sin autorización expresa y por escrito de la desarrolladora.
+        </p>
+        <p>
+          El contenido generado por el usuario (datos personales, documentos subidos,
+          anotaciones propias) es propiedad del usuario, según lo establecido en la sección 8.
+        </p>
+      </section>
+
+      <!-- 13. Governing law -->
+      <section class="section" id="ley-aplicable">
+        <h2><span class="section-num">13.</span>Ley aplicable y jurisdicción</h2>
+        <p>
+          Estos Términos de Servicio se rigen por las leyes de la
+          <strong>República Oriental del Uruguay</strong>.
+        </p>
+        <p>
+          Cualquier disputa derivada de o relacionada con estos términos o el uso de la App
+          se someterá a la jurisdicción exclusiva de los <strong>tribunales de Montevideo,
+          Uruguay</strong>, salvo que la legislación aplicable en el país del usuario
+          establezca otra jurisdicción obligatoria.
+        </p>
+      </section>
+
+      <!-- 14. Changes -->
+      <section class="section" id="cambios">
+        <h2><span class="section-num">14.</span>Cambios en los términos</h2>
+        <p>
+          Nos reservamos el derecho de actualizar estos Términos de Servicio en cualquier momento.
+          Cuando realicemos cambios materiales, te notificaremos mediante:
+        </p>
+        <ul>
+          <li>Una notificación visible dentro de la App.</li>
+          <li>Un correo electrónico a la dirección asociada a tu cuenta Google, cuando corresponda.</li>
+        </ul>
+        <p>
+          La fecha de "Última actualización" al inicio de este documento siempre reflejará
+          la versión vigente. El uso continuado de la App después de la publicación de cambios
+          implica tu aceptación de los nuevos términos.
+        </p>
+        <p>
+          Si no estás de acuerdo con los términos actualizados, podés dejar de usar la App
+          y solicitar la eliminación de tu cuenta.
+        </p>
+      </section>
+
+      <!-- 15. Contact -->
+      <section class="section" id="contacto">
+        <h2><span class="section-num">15.</span>Contacto</h2>
+        <p>
+          Si tenés preguntas, dudas o consultas sobre estos Términos de Servicio, podés
+          contactarnos en:
+        </p>
+        <div class="highlight-box">
+          <p>
+            <strong>Senda — Contacto legal</strong><br />
+            Desarrolladora: Jorgelina G. Saralegui<br />
+            Correo electrónico:
+            <a href="mailto:privacidad.senda@gmail.com" style="color: var(--brand-dark);">privacidad.senda@gmail.com</a><br />
+            Ubicación: Montevideo, Uruguay
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>
+        <strong style="color: var(--brand-dark);">Senda</strong> &nbsp;·&nbsp;
+        Desarrollado por Jorgelina G. Saralegui
+      </p>
+      <p>
+        <a href="mailto:privacidad.senda@gmail.com">privacidad.senda@gmail.com</a>
+        &nbsp;·&nbsp; Montevideo, Uruguay
+      </p>
+      <p style="margin-top: 8px;">
+        <a href="privacy.html">Política de Privacidad</a>
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
